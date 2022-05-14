@@ -18,9 +18,13 @@ class ResultScreen extends StatefulWidget {
 
 class _ResultScreenState extends State<ResultScreen> {
   int finalScore = 0;
+
+  
+
   @override
   Widget build(BuildContext context) {
     finalScore = ((widget.score / 38) * 100).toInt();
+    
     return Scaffold(
       backgroundColor: Colors.white,
       extendBodyBehindAppBar: true,
@@ -73,6 +77,7 @@ class _ResultScreenState extends State<ResultScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              
               Text(
                 'Your Score.....',
                 style: TextStyle(
@@ -99,16 +104,18 @@ class _ResultScreenState extends State<ResultScreen> {
               SizedBox(
                 height: 80.0.h,
               ),
-              finalScore == 100
-                  ? Text(
+
+              if (finalScore == 100)
+                 Text(
                       "You don't have any type of color blindness",
                       style: TextStyle(
                         fontSize: 20.0.sp,
                         fontWeight: FontWeight.w500,
                         color: Colors.black,
                       ),
-                    )
-                  : Text(
+                    ),
+              if (finalScore != 100 && finalScore >= 50)
+                Text(
                       "You may have a color blindness",
                       style: TextStyle(
                         fontSize: 18.0.sp,
@@ -116,6 +123,16 @@ class _ResultScreenState extends State<ResultScreen> {
                         color: Colors.black,
                       ),
                     ),
+              if (finalScore < 50 )
+                 Text(
+                      "You have a color blindness",
+                      style: TextStyle(
+                        fontSize: 18.0.sp,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                    ),
+              
               SizedBox(
                 height: 80.0.h,
               ),
