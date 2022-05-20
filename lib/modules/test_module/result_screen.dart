@@ -116,7 +116,7 @@ class _ResultScreenState extends State<ResultScreen> {
                     ),
               if (finalScore != 100 && finalScore >= 50)
                 Text(
-                      "You may have a color blindness",
+                      "You may have color blindness",
                       style: TextStyle(
                         fontSize: 18.0.sp,
                         fontWeight: FontWeight.bold,
@@ -125,7 +125,7 @@ class _ResultScreenState extends State<ResultScreen> {
                     ),
               if (finalScore < 50 )
                  Text(
-                      "You have a color blindness",
+                      "You have color blindness",
                       style: TextStyle(
                         fontSize: 18.0.sp,
                         fontWeight: FontWeight.bold,
