@@ -2,6 +2,7 @@ import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:graduation_project/layout/home_page.dart';
+import 'package:graduation_project/layout/splashscreen.dart';
 
 List<CameraDescription> cameras;
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
           debugShowCheckedModeBanner: false,
-          home: const HomePage(),
+          home: const SplashScreen(),
         );
       },
     );
